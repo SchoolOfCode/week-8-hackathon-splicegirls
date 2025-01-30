@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import appLogo from '/favicon.svg'
 import PWABadge from './PWABadge.jsx'
 import './App.css'
+import Randomiser from './Randomiser/Randomiser.jsx';
+import Playlist from './Playlist/Playlist.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
