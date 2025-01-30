@@ -16,7 +16,7 @@ export default defineConfig({
       },
 
       manifest: {
-        name: "\u0015Squats Song Form",
+        name: "Squats Song Form",
         short_name: "Squat Form",
         description:
           "We love shaking things up with a good song during our morning ritual squats! Have a tune that gets you moving? Share it with us!",
