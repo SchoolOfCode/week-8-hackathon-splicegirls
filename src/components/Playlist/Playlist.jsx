@@ -14,7 +14,7 @@ export default function Playlist() {
           <Paper 
             key={index} 
             className={classes.Cards} 
-            sx={{ backgroundColor:"#252525", color: "white", elevation: 0 }}
+            sx={{ backgroundColor:"#252525", color: "white", elevation: 0, borderRadius: "20px" }}
           >
             <p>Name: {song.name}</p>
             <p>Song Title: {song.songTitle}</p>

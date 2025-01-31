@@ -2,7 +2,7 @@
     padding: 2em;
     background-color: #252525;
     margin: 20px;
-    color: white;
+    color: whitesmoke;
     overflow: hidden;
     border-radius: 20px;
 }
@@ -10,7 +10,7 @@
 .FormButton {
     background-color: #424242;
     border: 2px solid #5bdc68;
-    color:white;
+    color:whitesmoke;
 }
 
 .FormButton:hover {

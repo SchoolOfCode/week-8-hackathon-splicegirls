@@ -4,13 +4,13 @@
     padding-right: 50px;
     background-color: #252525;
     margin: 20px;
-    color: white;
+    color: whitesmoke;
     overflow: hidden;
     height: auto;
     border-radius: 20px;
 }
 
-/* .Cards {
+.Cards {
     background-color: #424242;
-    color: white;
-} */
+    color: whitesmoke;
+}
