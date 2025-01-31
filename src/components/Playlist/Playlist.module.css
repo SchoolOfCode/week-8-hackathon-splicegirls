@@ -1,0 +1,10 @@
+.Container {
+    padding: 2em;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: linear-gradient(to bottom, #424242, black);
+    margin: 20px;
+    color: white;
+    overflow: hidden;
+    border-radius: 20px;
+}
