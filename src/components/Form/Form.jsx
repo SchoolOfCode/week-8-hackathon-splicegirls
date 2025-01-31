@@ -1,64 +1,66 @@
-import { useState } from "react";
+
+
 import { useAppContext } from "../../context/AppProvider";
 
 export default function Form() {
   const { addSong } = useAppContext();
 
-  // all the form states below
-  const [name, setName] = useState("");
-  const [songTitle, setSongTitle] = useState("");
-  const [link, setLink] = useState("");
-  const [comment, setComment] = useState("");
+  // Function to handle form submission
+  function handleSubmit(formData) {
+    const name = formData.get("name");
+    const songTitle = formData.get("songTitle");
+    const link = formData.get("link");
+    const comment = formData.get("comment");
+    console.log(name, songTitle, link, comment)
 
-  function handleSubmit(e) {
-    e.preventDefault();
+    // Create a new song object
     const newSong = { name, songTitle, link, comment };
-    addSong(newSong);
 
-    // set inputs back to empty
-    setName("");
-    setSongTitle("");
-    setLink("");
-    setComment("");
+    // Add the song to the context
+    addSong(newSong);
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form action={handleSubmit}>
       <div>
-        <label>Name:</label>
+        <label htmlFor="name">Name:</label>
         <input
+          id="name"
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="name"
+          placeholder="Your name"
           required
         />
       </div>
 
       <div>
-        <label>Song Title:</label>
+        <label htmlFor="songTitle">Song Title:</label>
         <input
+          id="songTitle"
           type="text"
-          value={songTitle}
-          onChange={(e) => setSongTitle(e.target.value)}
+          name="songTitle"
+          placeholder="Song title"
           required
         />
       </div>
 
       <div>
-        <label>Link:</label>
+        <label htmlFor="link">Link:</label>
         <input
+          id="link"
           type="text"
-          value={link}
-          onChange={(e) => setLink(e.target.value)}
+          name="link"
+          placeholder="Song link"
           required
         />
       </div>
 
       <div>
-        <label>Comment:</label>
+        <label htmlFor="comment">Comment:</label>
         <textarea
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
+          id="comment"
+          name="comment"
+          placeholder="Your comment"
         />
       </div>
 
