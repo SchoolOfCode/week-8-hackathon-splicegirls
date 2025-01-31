@@ -1,6 +1,6 @@
 .FormContainer {
     padding: 2em;
-    background-color: #242424;
+    background: linear-gradient(to bottom, #424242, black);
     margin: 20px;
     color: white;
     overflow: hidden;
@@ -14,7 +14,7 @@
 }
 
 .FormButton:hover {
-    background-color: white;
+    background-color: #5bdc68;
     color: #424242;
     border: 2px solid #5bdc68;
 }
