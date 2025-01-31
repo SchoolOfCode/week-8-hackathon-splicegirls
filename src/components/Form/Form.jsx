@@ -1,65 +1,61 @@
-import { useState } from "react";
 import { useAppContext } from "../../context/AppProvider";
 import classes from './Form.module.css'
 
 export default function Form() {
   const { addSong } = useAppContext();
-
-  // all the form states below
-  const [name, setName] = useState("");
-  const [songTitle, setSongTitle] = useState("");
-  const [link, setLink] = useState("");
-  const [comment, setComment] = useState("");
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const newSong = { name, songTitle, link, comment };
+  //No need to prevent default
+  //No need to set up our formData
+  // Function to handle form submission
+  const handleSubmit = (formData) => {    
+    // Extract form data and create a new song object
+  const newSong = Object.fromEntries(formData); // Convert FormData to a plain object
+    // Add the song to the context
     addSong(newSong);
 
-    // set inputs back to empty
-    setName("");
-    setSongTitle("");
-    setLink("");
-    setComment("");
-  }
+    //No need to reset
+  };
 
   return (
     <form onSubmit={handleSubmit} className={classes.FormContainer}>
       <div>
-        <label>Name:</label>
+        <label htmlFor="name">Name:</label>
         <input
+          id="name"
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="name"
+          placeholder="Your name"
           required
         />
       </div>
 
       <div>
-        <label>Song Title:</label>
+        <label htmlFor="songTitle">Song Title:</label>
         <input
+          id="songTitle"
           type="text"
-          value={songTitle}
-          onChange={(e) => setSongTitle(e.target.value)}
+          name="songTitle"
+          placeholder="Song title"
           required
         />
       </div>
 
       <div>
-        <label>Link:</label>
+        <label htmlFor="link">Link:</label>
         <input
+          id="link"
           type="text"
-          value={link}
-          onChange={(e) => setLink(e.target.value)}
+          name="link"
+          placeholder="Song link"
           required
         />
       </div>
 
       <div>
-        <label>Comment:</label>
+        <label htmlFor="comment">Comment:</label>
         <textarea
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
+          id="comment"
+          name="comment"
+          placeholder="Your comment"
         />
       </div>
 
