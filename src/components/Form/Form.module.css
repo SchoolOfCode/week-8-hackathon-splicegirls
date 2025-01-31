@@ -12,3 +12,9 @@
     border: 2px solid #5bdc68;
     color:white;
 }
+
+.FormButton:hover {
+    background-color: white;
+    color: #424242;
+    border: 2px solid #5bdc68;
+}
