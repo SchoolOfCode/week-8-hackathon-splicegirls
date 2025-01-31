@@ -2,9 +2,15 @@
     padding: 2em;
     padding-left: 50px;
     padding-right: 50px;
-    background: linear-gradient(to bottom, #424242, black);
+    background-color: #252525;
     margin: 20px;
     color: white;
     overflow: hidden;
+    height: auto;
     border-radius: 20px;
 }
+
+/* .Cards {
+    background-color: #424242;
+    color: white;
+} */
