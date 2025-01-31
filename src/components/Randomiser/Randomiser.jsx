@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../../context/AppProvider";
+import classes from './Randomiser.module.css'
 
 export default function Randomiser() {
   const { songs } = useAppContext();
@@ -11,7 +12,7 @@ export default function Randomiser() {
   }
 
   return (
-    <section>
+    <section className={classes.RandomiserContainer}>
       {/* display random song */}
       <div>
         <p>Name: {randomSong.name}</p>
@@ -20,7 +21,7 @@ export default function Randomiser() {
         <p>Comment: {randomSong.comment}</p>
       </div>
       {/* click button to get random song */}
-      <button onClick={() => getRandomSong()}>Randomise!</button>
+      <button onClick={() => getRandomSong()} className={classes.RandomiserButton}>Randomise!</button>
     </section>
   );
 }

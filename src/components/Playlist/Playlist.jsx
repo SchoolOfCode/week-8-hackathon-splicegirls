@@ -1,10 +1,11 @@
 import { useAppContext } from "../../context/AppProvider";
+import classes from './Playlist.module.css'
 
 export default function Playlist() {
   const { songs } = useAppContext();
 
   return (
-    <section>
+    <section className={classes.Container}>
       {songs.map((song, index) => (
         <ul key={index}>
           <p>Name: {song.name}</p>

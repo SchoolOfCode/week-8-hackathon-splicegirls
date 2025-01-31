@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAppContext } from "../../context/AppProvider";
-
+import classes from './Form.module.css'
+s
 export default function Form() {
   const { addSong } = useAppContext();
 
@@ -23,7 +24,7 @@ export default function Form() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={classes.FormContainer}>
       <div>
         <label>Name:</label>
         <input
@@ -62,7 +63,7 @@ export default function Form() {
         />
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" className={classes.FormButton}>Submit</button>
     </form>
   );
 }

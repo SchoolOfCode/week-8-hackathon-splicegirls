@@ -7,6 +7,11 @@
 
 .card {
   padding: 2em;
+  background-color: #181818;
+  margin: 0;
+  color: white;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 .read-the-docs {
