@@ -1,27 +1,27 @@
-
-
 import { useAppContext } from "../../context/AppProvider";
 
 export default function Form() {
   const { addSong } = useAppContext();
 
   // Function to handle form submission
-  function handleSubmit(formData) {
-    const name = formData.get("name");
-    const songTitle = formData.get("songTitle");
-    const link = formData.get("link");
-    const comment = formData.get("comment");
-    console.log(name, songTitle, link, comment)
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
 
-    // Create a new song object
-    const newSong = { name, songTitle, link, comment };
+    // Create a FormData object from the form
+    const formData = new FormData(event.target);
+
+    // Extract form data and create a new song object
+    const newSong = Object.fromEntries(formData); // Convert FormData to a plain object
 
     // Add the song to the context
     addSong(newSong);
-  }
+
+    // Reset the form after submission
+    event.target.reset();
+  };
 
   return (
-    <form action={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
         <input
