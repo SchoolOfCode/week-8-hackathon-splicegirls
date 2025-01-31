@@ -1,26 +1,26 @@
-
 .RandomiserContainer {
-    padding: 2em;
-    background-color: #252525;
-    margin: 20px;
-    color: whitesmoke;
-    overflow: hidden;
-    border-radius: 20px;
+  padding: 1rem;
+  background-color: #252525;
+  color: whitesmoke;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .RandomiserButton {
-    background-color: #424242;
-    border: 2px solid #5bdc68;
-    color:whitesmoke;
+  background-color: #424242;
+  border: 2px solid #5bdc68;
+  color: whitesmoke;
+  width: 55%;
+  padding: 1rem;
 }
 
 .RandomiserButton:hover {
-    background-color: #5bdc68;
-    color: #424242;
-    border: 2px solid #5bdc68;
-    
+  background-color: #5bdc68;
+  color: #424242;
+  border: 2px solid #5bdc68;
+  transition: background 0.3s ease-in-out;
 }
 
 .bold {
-        font-weight: bold;
+  font-weight: bold;
 }

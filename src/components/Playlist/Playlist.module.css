@@ -1,16 +1,31 @@
 .Container {
-    padding: 2em;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: #252525;
-    margin: 20px;
-    color: whitesmoke;
-    overflow: hidden;
-    height: auto;
-    border-radius: 20px;
+  padding: 2em;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #252525;
+  margin: 20px;
+  color: white;
+  height: auto;
+  border-radius: 20px;
 }
 
 .Cards {
-    background-color: #424242;
-    color: whitesmoke;
+  background-color: #333 !important;
+  color: whitesmoke !important;
+  padding: 1rem;
+  border-radius: 10px !important;
+}
+.Row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.Row label {
+  font-weight: 800;
+}
+
+.Row span {
+  color: #cccccc;
 }
